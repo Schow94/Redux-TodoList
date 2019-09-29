@@ -1,0 +1,9 @@
+export const ADD_TODO = 'ADD_TODO';
+export const REMOVE_TODO = 'DELETE_TODO';
+export const EDIT_TODO = 'EDIT_TODO';
+export const TOGGLE_COMPLETION = 'TOGGLE_COMPLETION';
+
+export const SHOW_ALL = 'SHOW_ALL';
+export const SHOW_COMPLETED = 'SHOW_COMPLETED';
+export const SHOW_NOT_COMPLETED = 'SHOW_NOT_COMPLETED';
+export const SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER';
