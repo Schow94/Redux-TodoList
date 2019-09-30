@@ -1,4 +1,10 @@
-import { ADD_TODO, REMOVE_TODO, EDIT_TODO, TOGGLE_COMPLETION } from './types';
+import {
+  ADD_TODO,
+  REMOVE_TODO,
+  EDIT_TODO,
+  TOGGLE_COMPLETION,
+  SET_VISIBILITY_FILTER
+} from './types';
 
 export const addTodo = taskName => {
   return {
@@ -27,3 +33,9 @@ export const toggleCompletion = (todoId, task, completedStatus) => {
     payload: { id: todoId, task: task, completed: completedStatus }
   };
 };
+
+// Custom action that returns a reducer that returns ACTION TYPES
+export const setVisibilityFilter = filter => ({
+  type: SET_VISIBILITY_FILTER,
+  filter
+});

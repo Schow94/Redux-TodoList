@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import Footer from './Footer';
-import TodoList from './TodoList';
-import AddTodoForm from './AddTodoForm';
 import {
   addTodo,
   removeTodo,
   editTodo,
   toggleCompletion
 } from './actions/list';
+import { SHOW_ALL, SHOW_COMPLETED, SHOW_NOT_COMPLETED } from './actions/types';
+
+import AddTodoForm from './AddTodoForm';
+import VisibleTodoList from './VisibleTodoList';
 
 class TodoApp extends Component {
   render() {
@@ -19,24 +20,15 @@ class TodoApp extends Component {
       <div style={container}>
         <h1>Redux TodoList</h1>
         <AddTodoForm add={this.props.onAddTodo} />
-        <TodoList
+        <VisibleTodoList
           remove={this.props.onRemoveTodo}
-          list={this.props.list}
           edit={this.props.onEditTodo}
           toggleCompletion={this.props.onComplete}
         />
-        <Footer />
       </div>
     );
   }
 }
-
-const mapStateToProps = state => {
-  return {
-    list: state.list,
-    visFilter: state.visFilter
-  };
-};
 
 const mapDispatchToProps = dispatch => {
   return {
@@ -58,6 +50,6 @@ const styles = {
 };
 
 export default connect(
-  mapStateToProps,
+  null,
   mapDispatchToProps
 )(TodoApp);
