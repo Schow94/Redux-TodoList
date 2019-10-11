@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.js": "/Redux-TodoList/static/js/main.f394fd64.chunk.js",
+    "main.js.map": "/Redux-TodoList/static/js/main.f394fd64.chunk.js.map",
+    "runtime-main.js": "/Redux-TodoList/static/js/runtime-main.e72f84c6.js",
+    "runtime-main.js.map": "/Redux-TodoList/static/js/runtime-main.e72f84c6.js.map",
+    "static/js/2.d129830b.chunk.js": "/Redux-TodoList/static/js/2.d129830b.chunk.js",
+    "static/js/2.d129830b.chunk.js.map": "/Redux-TodoList/static/js/2.d129830b.chunk.js.map",
+    "index.html": "/Redux-TodoList/index.html",
+    "precache-manifest.2e3c0812e82dda0908caa1a589e30b7c.js": "/Redux-TodoList/precache-manifest.2e3c0812e82dda0908caa1a589e30b7c.js",
+    "service-worker.js": "/Redux-TodoList/service-worker.js"
+  }
+}
