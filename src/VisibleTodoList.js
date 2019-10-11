@@ -15,7 +15,6 @@ class VisibleTodoList extends Component {
           edit={this.props.edit}
           toggleCompletion={this.props.toggleCompletion}
         />
-        <h1>VisibleList</h1>
         <button onClick={() => this.props.onSetVisibilityFilter(SHOW_ALL)}>
           Show All
         </button>
@@ -34,7 +33,10 @@ class VisibleTodoList extends Component {
   }
 }
 
-//Custom reducer that changes value of list, depending on VISIBILITY_FILTER
+//- Custom Fxn/reducer that changes value of list, depending on VISIBILITY_FILTER
+//- Since this reducer accesses both list and vis as props, it needs to be inside
+// index.js or a parent component to access both
+//- I don't think it would work if it was inside it's own reducer file
 const getVisibleTodos = (list, filter) => {
   // eslint-disable-next-line default-case
   switch (filter) {
@@ -57,13 +59,16 @@ const mapStateToProps = state => {
     //- Pass vis/ActionType as a prop and show user particular view depending
     // on the action type passed to it
     list: getVisibleTodos(state.list, state.vis),
+
     //- vis is visReducer which returns an action type
+    //initial actiontype/state = SHOW_ALL
     vis: state.vis
   };
 };
 
-// Firing custom action Creator to change filter type & change view depending
+//-Firing custom action Creator to change filter type & change view depending
 // on filter type
+//-vis is basically a toggle
 const mapDispatchToProps = dispatch => {
   return {
     onSetVisibilityFilter: filter => dispatch(setVisibilityFilter(filter))

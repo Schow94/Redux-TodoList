@@ -35,6 +35,8 @@ export const toggleCompletion = (todoId, task, completedStatus) => {
 };
 
 // Custom action that returns a reducer that returns ACTION TYPES
+//Could put this in it's own component if I wanted to to spread out logic
+// depending on the type of state it belongs to
 export const setVisibilityFilter = filter => ({
   type: SET_VISIBILITY_FILTER,
   filter

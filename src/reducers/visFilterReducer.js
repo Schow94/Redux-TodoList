@@ -16,4 +16,3 @@ const visFilterReducer = (state = SHOW_ALL, action) => {
 };
 
 export default visFilterReducer;
-// have list reducer pull state from visFilterReducer. Compose state here.
